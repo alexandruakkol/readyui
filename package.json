@@ -1,6 +1,6 @@
 {
   "name": "readyui",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "description": "UI library for SaaS products",
   "main": "index.js",
   "scripts": {
