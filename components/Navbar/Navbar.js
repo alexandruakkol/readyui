@@ -3,14 +3,16 @@ import './Navbar.css';
 import { GiHamburgerMenu } from "react-icons/gi";
 
 const Navbar = (props) => {
-    const {items, logo_el, cta_button} = props;
+    let {items, large_logo, small_logo, cta_button} = props;
+    if(!small_logo) small_logo = large_logo;
+    
     const [isListShown, setIsListShown] = useState(false);
 
     const reactElement = React.Children.only(cta_button);
 
     return (
     <nav className='rui-navbar'>
-        <>{logo_el}</>
+        <div className="rui-logo">{large_logo}</div>
         <div className='rui-hamburger-container'>
             <GiHamburgerMenu className="rui-hamburger" onClick={() => {setIsListShown(!isListShown)}}/>
             <div className={`rui-hamburger-list ${isListShown ? 'open' : ''}`}>
