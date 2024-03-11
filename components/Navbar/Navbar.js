@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ResponsiveNavbar = (props) => {
+const Navbar = (props) => {
     const {items, logo_el} = props;
   return (
     <nav style={styles.nav}>
@@ -32,4 +32,4 @@ const styles = {
 }
 
 
-export default ResponsiveNavbar
+export default Navbar
