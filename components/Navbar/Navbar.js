@@ -7,7 +7,6 @@ const Navbar = (props) => {
     if(!small_logo) small_logo = large_logo;
     
     const [isListShown, setIsListShown] = useState(false);
-
     const reactElement = React.Children.only(cta_button);
 
     return (
