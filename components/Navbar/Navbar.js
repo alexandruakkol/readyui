@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react'
-import './R_Navbar.css';
+import './Navbar.css';
 import { GiHamburgerMenu } from "react-icons/gi";
 
-const R_Navbar = (props) => {
+const Navbar = (props) => {
     const {items, logo_el, cta_button} = props;
     const [isListShown, setIsListShown] = useState(false);
 
@@ -28,4 +28,4 @@ const R_Navbar = (props) => {
 }
 
 
-export default R_Navbar
+export default Navbar
