@@ -8,7 +8,8 @@
     box-shadow: 0 1px 1px var(--BORDERS);
     align-items: center;
     justify-content: space-between;
-    width: 90%;
+    width: 100%;
+    padding: 0px 30px 0px 30px;
     position: relative;
 }
 /* ---------------- ITEMS --------------- */
@@ -33,7 +34,7 @@
     justify-content: flex-end;
 }
 
-.rui-hamburger-list {
+.rui-hamburger-list{
     display:none;
     position: absolute;
     border-radius:7px;
@@ -52,7 +53,7 @@
     border: 1px solid #ccc;
     padding: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-    height: 200px;
+    height: 300px;
 }
 
 .rui-hamburger-item{
@@ -61,11 +62,16 @@
     border-bottom:1px solid rgb(197, 197, 197);
 }
 
+.rui-cta-item{
+    border:0px;
+    width: 100%;
+}
+
 @media only screen and (max-width: 576px){
     .rui-hamburger,.rui-hamburger-list,.rui-hamburger-container{
         display:flex;
     }
-    .rui-navbar-items{
+    .rui-navbar-items,.rui-cta{
         display:none;
     }
 
