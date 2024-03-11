@@ -21,13 +21,20 @@
     "url": "https://github.com/alexandruakkol/readyui/issues"
   },
   "homepage": "https://github.com/alexandruakkol/readyui#readme",
-  "dependencies": {
-    "react": "^16.0.0",
-    "react-icons": "^5.0.1"
-  },
   "devDependencies": {
     "@babel/cli": "^7.23.9",
     "@babel/core": "^7.24.0",
-    "@babel/preset-react": "^7.23.3"
+    "@babel/preset-react": "^7.23.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^5.0.1"
+  },
+  "peerDependencies": {
+    "@babel/cli": "^7.23.9",
+    "@babel/core": "^7.24.0",
+    "@babel/preset-react": "^7.23.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^5.0.1"
   }
 }
