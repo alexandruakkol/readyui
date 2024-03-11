@@ -1,35 +1,26 @@
-import React from 'react';
+import React, {useState} from 'react'
+import './R_Navbar.css';
+import { GiHamburgerMenu } from "react-icons/gi";
 
-const Navbar = (props) => {
+const R_Navbar = (props) => {
     const {items, logo_el} = props;
+    const [isListShown, setIsListShown] = useState(false);
+
   return (
-    <nav style={styles.nav}>
+    <nav className='rui-navbar'>
         <>{logo_el}</>
-        <div style={styles.div}>
+        <div className='rui-hamburger-container'>
+            <GiHamburgerMenu className="rui-hamburger" onClick={() => {setIsListShown(!isListShown)}}/>
+            <div className={`rui-hamburger-list ${isListShown ? 'open' : ''}`}>
+                {items.map((item, index) => <div key={index} className="rui-hamburger-item">{item}</div>)}
+            </div>
+        </div>
+        <div className="rui-navbar-items">
             {items}
         </div>
     </nav>
   )
 }
 
-const styles = {
-    nav:{
-        userSelect: 'none',
-        paddingLeft: '2vw',
-        display: 'flex',
-        height: '7vh',
-        boxShadow: '0 1px 1px var(--BORDERS)',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        width: '90%'
-    },
-    div:{
-        gap: '33px',
-        display: 'flex',
-        width: '100%',
-        justifyContent: 'center'
-    }
-}
 
-
-export default Navbar
+export default R_Navbar
