@@ -4,7 +4,7 @@
   "description": "UI library for SaaS products",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx babel components -d lib"
   },
   "repository": {
     "type": "git",
@@ -23,5 +23,10 @@
   "homepage": "https://github.com/alexandruakkol/readyui#readme",
   "dependencies": {
     "react": "^16.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.23.9",
+    "@babel/core": "^7.24.0",
+    "@babel/preset-react": "^7.23.3"
   }
 }
