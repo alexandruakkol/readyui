@@ -1,0 +1,16 @@
+nav:{
+    userSelect: 'none',
+    paddingLeft: '2vw',
+    display: 'flex',
+    height: '7vh',
+    boxShadow: '0 1px 1px var(--BORDERS)',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    width: '90%'
+},
+div:{
+    gap: '33px',
+    display: 'flex',
+    width: '100%',
+    justifyContent: 'center'
+}
