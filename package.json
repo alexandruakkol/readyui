@@ -22,6 +22,6 @@
   },
   "homepage": "https://github.com/alexandruakkol/readyui#readme",
   "dependencies": {
-    "react": "^18.2.0"
+    "react": "^16.0.0"
   }
 }
