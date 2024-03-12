@@ -5,9 +5,15 @@ import { GiHamburgerMenu } from "react-icons/gi";
 const Navbar = (props) => {
     let {items, large_logo, small_logo, cta_button} = props;
     if(!small_logo) small_logo = large_logo;
-    
+
+    // --- check CTA
+    let haveCTA = true;
+    if(!cta_button) {
+        haveCTA = false;
+        cta_button = <></>;
+    }
+
     const [isListShown, setIsListShown] = useState(false);
-    const reactElement = React.Children.only(cta_button);
     const [logo, setLogo] = useState(small_logo);
 
     useEffect(() => {
@@ -28,16 +34,16 @@ const Navbar = (props) => {
           window.removeEventListener('resize', handleResize);
         };
     },[]);
-
+    console.log(cta_button)
 
     return (
     <nav className='rui-navbar'>
         <div className="rui-logo">{logo}</div>
         <div className='rui-hamburger-container'>
-            <GiHamburgerMenu className="rui-hamburger" onClick={() => {setIsListShown(!isListShown)}}/>
+            {(items.length || haveCTA) ? <GiHamburgerMenu className="rui-hamburger" onClick={() => {setIsListShown(!isListShown)}}/> : <></>}
             <div className={`rui-hamburger-list ${isListShown ? 'open' : ''}`}>
                 {items.map((item, index) => <div key={index} className="rui-hamburger-item">{item}</div>)}
-                <div key={'last'} className={`rui-hamburger-item rui-cta-item`}>{reactElement}</div>
+                <div key={'last'} className={`rui-hamburger-item rui-cta-item`}>{cta_button}</div>
             </div>
         </div>
         <div className="rui-navbar-items">
@@ -50,4 +56,4 @@ const Navbar = (props) => {
 }
 
 
-export default Navbar
+export {Navbar}
