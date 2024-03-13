@@ -57,7 +57,7 @@
 }
 
 .rui-hamburger-item{
-    font-size:20px;
+    font-size:1.2rem;
     padding: 15px;
     border-bottom:1px solid rgb(197, 197, 197);
 }
@@ -77,12 +77,12 @@
     .rui-logo{
         width: 35vw;
     }
-
+    
 }
 
 @media (min-width:576px) {
-    .rui-navbar-items {
-        font-size: 16px;
+    .rui-navbar-items,.rui-cta {
+        font-size: 15px;
     }
     .rui-logo{
         width: 25vw;
@@ -90,15 +90,16 @@
     
 }
 @media (min-width:768px) {
-    .rui-navbar-items {
-        font-size: 21px;
+    .rui-navbar-items,.rui-cta {
+        font-size: 18px;
     }
     .rui-logo{
         width: 23vw;
     }
+    
 }
 @media (min-width:992px) {
-    .rui-navbar-items {
+    .rui-navbar-items,.rui-cta {
         font-size: 22px;
     }
     .rui-logo{
