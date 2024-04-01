@@ -44,11 +44,12 @@
     left: 0;
     width: 60vw;
     background-color: #fff; 
-    z-index: 1; 
+    z-index: 10; 
     height: 0px;
     overflow: hidden;
     transition: height 0.5s ease; 
     flex-direction: column;
+
 }
 
 .rui-hamburger-list.open {
